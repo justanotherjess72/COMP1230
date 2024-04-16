@@ -1,0 +1,37 @@
+**************************************
+*****************NOTES****************
+**************************************
+
+- On the main page beef up the about us section
+- the three featured learning paths should be links to individual path pages for
+    those subjects
+- if a user is already logged in the join now and log in buttons should just
+    direct the user to a page that says that information and that they will be 
+    redirected to the dashboard page with maybe a 3 second timer
+    - message might read: "You are already registered and logged in - redirecting 
+    you to the dashboard..."
+
+
+**************************************
+**********Learning Path Page**********
+**************************************
+
+
+
+**************************************
+************Dashboard Page************
+**************************************
+- upload photo
+- update bio - i think we have to add another field to the database for this?
+- small screen query for the nav bar since two more items were added
+    - maybe implement the hamburger at 670px and lower?
+
+
+
+
+Ok I think we are good here - I changed the username back to admin so you won't have to
+change that on your end for it to work. Have a look over but I think it is good to go.
+Jess - would you mind being the one to upload it to the gblearn server since only
+one of us need to do so. And just double check its all working when its on the live 
+server. I will work on writing up the readme doc and will try to have that over within
+the hour

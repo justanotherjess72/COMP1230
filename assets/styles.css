@@ -1,0 +1,564 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h2 {
+  padding: 10px 0;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Responsive padding for smaller screens */
+@media screen and (max-width: 1200px) {
+  .header-container {
+    padding: 0 20px;
+  }
+}
+
+/* Responsive layout for smaller screens (less than 650px) */
+@media screen and (max-width: 650px) {
+  .header-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .header-container .logo {
+    flex-basis: 100%; /* Logo takes full width */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; /* Space between logo and nav links */
+  }
+
+  nav ul {
+    flex-basis: 100%; /* Nav takes full width */
+    justify-content: center;
+    padding: 0;
+  }
+
+  nav ul li {
+    margin: 0 10px; /* Adjust margins for nav links */
+  }
+}
+
+.header-container .logo img {
+  height: 50px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ddd;
+}
+
+/* Welcome Section */
+.welcome {
+  background-color: #f4f4f4;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.welcome-message {
+  margin-bottom: 20px;
+}
+
+/* Welcome Section Buttons */
+.welcome .btn {
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 10px;
+  display: inline-block; /* Ensures the buttons respect width and height */
+  width: 120px; /* Fixed width for both buttons */
+  text-align: center; /* Centers the text within the button */
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.welcome-buttons {
+  display: inline-block; /* Align buttons next to each other */
+}
+
+.welcome h1 {
+  margin-bottom: 10px;
+}
+
+/* Featured Paths Container */
+.featured-paths {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Path List Styling */
+.path-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+/* Individual Path Item Styling */
+.path-item {
+  flex-basis: calc(33.333% - 20px);
+  margin: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+.path-item img {
+  width: 80%;
+  height: auto; /* Adjust height automatically */
+  display: block; /* Ensures the image takes its own line */
+  margin: 0 auto; /* Centers the image in the card */
+}
+
+.feature-title {
+  padding: 10px 0;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .path-item {
+    flex-basis: calc(
+      50% - 20px
+    ); /* Adjust for 2 items per row on medium screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .path-item {
+    flex-basis: 100%; /* Full width for small screens */
+  }
+}
+
+/* Search Section */
+.search-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.search-container {
+  display: flex; /* Aligns items in a row */
+  justify-content: center; /* Center aligns the items horizontally */
+  margin: 0 auto; /* Center the container */
+  max-width: 600px; /* Maximum width */
+}
+
+.search-bar {
+  flex-grow: 1; /* Allows the search bar to grow and fill the space */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 10px; /* Space between search bar and button */
+}
+
+.search-btn {
+  width: 100px; /* Fixed width for the button */
+  padding: 10px 15px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background-color: #555;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 480px) {
+  .search-container {
+    flex-direction: column;
+  }
+  .search-bar {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+  .search-btn {
+    width: 100%;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Form Styling */
+form {
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: inline-block; /* This will shrink the form to fit its content */
+  text-align: left; /* Aligns form elements to the left */
+}
+
+label {
+  display: block; /* Each label takes a full row */
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%; /* Makes input fields take up the full width of the form */
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.about-section {
+  background-color: #f4f4f4;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+.about-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* DASHBOARD */
+
+/* Jump button */
+.jump-button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.jump-button {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.jump-button:hover {
+  background-color: #0056b3;
+}
+
+
+.dashboard {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.profile-container {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+  display: flex; /* Use flexbox to align items side by side */
+  align-items: start; /* Align items to the start of the container */
+  gap: 20px; /* Add some space between the profile photo and bio */
+}
+
+.profile-photo-section {
+  flex-basis: 30%; /* Take up 30% of the container */
+  text-align: center; /* Center the contents */
+}
+
+#photo-upload-form {
+  margin-top: 0;
+}
+
+.profile-photo-section img {
+  border-radius: 50%; /* Make image rounded */
+  width: 150px;
+  height: 150px;
+  object-fit: cover; /* Ensures the image fits properly */
+}
+
+.bio-section {
+  flex-basis: 70%; /* Take up the remaining 70% of the container */
+  padding-left: 20px;
+}
+
+.bio-button-group {
+  display: flex;
+  justify-content: space-between; /* Keeps the buttons at each end */
+  align-items: center; /* Aligns buttons vertically in the center */
+  margin-top: 10px;
+}
+
+.bio-button-group button {
+  margin-right: 5px; /* Space between buttons */
+  height: 30px;
+  text-align: center;
+  width: 50%;
+}
+
+#edit-bio, #save-bio {
+  width: 150px; /* Fixed width of 150px for both buttons */
+  text-align: center; /* Center the text inside the buttons */
+  align-items: center;
+  margin: 0; /* Remove any additional margin */
+  padding: 10px 0; /* Add some padding for better appearance */
+  flex-shrink: 0; /* Prevents the buttons from shrinking */
+}
+
+#bio-edit {
+  width: 100%; /* Full width of the container */
+  height: 100px;
+  display: block; /* Make it always visible */
+  margin-top: 10px;
+}
+
+#save-bio {
+  display: inline-block; /* Make the save button visible */
+}
+
+/*Mobile Settings*/
+@media (max-width: 770px) {
+  .bio-button-group {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: stretch; /* Stretch buttons to full width */
+  }
+
+  #edit-bio, #save-bio {
+    width: 100%; /* Full width for buttons */
+    margin-bottom: 10px; /* Add some space between the buttons */
+  }
+
+  #edit-bio:last-child, #save-bio:last-child {
+    margin-bottom: 0; /* Remove margin from the last button */
+  }
+
+  .profile-container {
+    flex-direction: column; /* Stack photo and bio sections vertically */
+    align-items: center;
+  }
+
+  .profile-photo-section, .bio-section {
+    width: 100%; /* Full width for photo and bio sections */
+  }
+
+  #photo-upload-form {
+    width: auto; /* Adjust the width as needed */
+    /* Center the form horizontally */
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/*LEARNING PATHS*/
+.search-results .post-item {
+  background-color: #f8f9fa; /* Light background for differentiation */
+  border: 1px solid #dee2e6; /* Lighter border */
+}
+
+.search-results-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 10px;
+  /* Add any additional styling as needed */
+}
+
+
+.learning-paths-container {
+  display: flex;
+  align-items: flex-start;
+  max-width: 800px;
+  margin: auto; /* Center the container */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Styling for the Search Posts Form */
+.learning-paths-container form:first-of-type {
+  flex-basis: 40%; /* 30% of the container's width */
+  margin-right: 10px; /* Space between forms */
+}
+
+/* Styling for the Create Post Form */
+.learning-paths-container form:last-of-type {
+  flex-basis: 60%; /* 70% of the container's width */
+}
+
+.learning-paths-container input, 
+.learning-paths-container select, 
+.learning-paths-container textarea {
+  width: 100%; /* Full width inputs */
+  margin-bottom: 10px; /* Space between form elements */
+  padding: 10px; /* Padding for better appearance */
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 660px) {
+  .learning-paths-container {
+    flex-direction: column; /* Stack forms vertically on small screens */
+  }
+
+  .learning-paths-container form {
+    flex-basis: 100%; /* Full width for both forms on small screens */
+    margin-right: 0; /* Remove space between forms */
+  }
+}
+
+/* POSTS */
+.posts-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.posts-list {
+  list-style: none;
+  padding: 0;
+}
+
+.post-item {
+  display: flex; /* Enable flex layout */
+  align-items: start; /* Align items to the start */
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.post-content {
+  flex-grow: 1; /* Allow the text content to grow */
+}
+
+.resource-item {
+  margin-bottom: 5px; /* Space between resource items */
+}
+
+.post-image {
+  margin-left: 20px; /* Space between text and image */
+  flex-shrink: 0; /* Prevent the image from shrinking */
+}
+
+.post-image img {
+  max-width: 100px; /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.post-item h3 {
+  margin: 0 0 10px 0;
+}
+
+.post-item p {
+  margin: 5px 0;
+}
+
+.post-item a {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+
+/* Styling for the resource links */
+.resource-item a {
+  color: #007bff; /* Change to your preferred link color */
+  text-decoration: none; /* Removes the underline */
+  transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.resource-item a:hover {
+  color: #0056b3; /* Darker shade on hover, adjust as needed */
+}
+
+/* Styling for the resources list to remove bullet points */
+.resources-list {
+  list-style-type: none; /* Removes bullet points */
+  padding-left: 0; /* Adjust padding as needed */
+  margin: 0; /* Adjust margin as needed */
+}
+
+.resource-item {
+  margin-bottom: 5px; /* Space between items */
+  /* Add any additional styling you want for list items */
+}
